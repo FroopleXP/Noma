@@ -63,7 +63,7 @@ namespace noma
 
                     MessageBox.Show("Connected!");
 
-                } catch (InvalidCastException e) {
+                } catch (Exception e) {
                     // Failed to connect to the COM port
                     MessageBox.Show("Failed to open COM port!");
                     MessageBox.Show(e.Data.ToString());
