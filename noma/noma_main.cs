@@ -73,7 +73,7 @@ namespace noma
             if (mouse_to_x && mouse_to_y == true) {
                 move_mouse(mouse_x, mouse_y);
             } else {
-                MessageBox.Show("You must only enter number!asdasds");
+                MessageBox.Show("You must only enter number!");
             }
 
         }
