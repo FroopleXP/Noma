@@ -13,6 +13,10 @@ namespace noma
 {
     public partial class noma_main_form : Form
     {
+
+        // Creating an array of the available baud rate
+        int[] baud_rates_arr = { 9600, 115200 };
+
         public noma_main_form()
         {   
 
@@ -26,13 +30,18 @@ namespace noma
             if (ports.Length > 0) {
                 // There are ports available... Populate the combobox
                 foreach (string port in ports) {
-                    noma_com_port_box.Items.Add(port);
+                    noma_com_port.Items.Add(port);
                 }    
 
             } else {
                 // No ports are available
                 MessageBox.Show("No ports are available!");
-                noma_com_port_box.Items.Add("No ports available!");
+                noma_com_port.Items.Add("No ports available!");
+            }
+
+            // Populating the baud select box
+            foreach (int rate in baud_rates_arr) {
+                noma_com_baud.Items.Add(rate);
             }
 
         }
@@ -44,7 +53,27 @@ namespace noma
             noma_serial_port.BaudRate = baud;
             noma_serial_port.PortName = port_name;
 
-            MessageBox.Show(noma_serial_port.IsOpen.ToString()); 
+            // Checking that the port isn't already in use
+            if (!noma_serial_port.IsOpen) {
+
+                try {
+
+                    // It's not, let's try to open it
+                    noma_serial_port.Open();
+
+                    MessageBox.Show("Connected!");
+
+                } catch (InvalidCastException e) {
+                    // Failed to connect to the COM port
+                    MessageBox.Show("Failed to open COM port!");
+                    MessageBox.Show(e.Data.ToString());
+
+                }
+
+            } else {
+                // Port is already in use
+                MessageBox.Show("Port is already in use!");
+            }
             
 
         }
@@ -80,7 +109,14 @@ namespace noma
 
         // Listening for a click on the connect button
         private void noma_com_connect_Click(object sender, EventArgs e) {
-            
+
+            // Getting the baud and com port to connect to
+            string port = noma_com_port.Text;
+            int baud = int.Parse(noma_com_baud.Text);
+
+            // Connecting
+            connect_to_port(port, baud);
+
         }
 
     }

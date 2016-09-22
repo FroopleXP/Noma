@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.noma_com_port_box = new System.Windows.Forms.ComboBox();
+            this.noma_com_port = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.noma_serial_port = new System.IO.Ports.SerialPort(this.components);
             this.noma_mouse_x = new System.Windows.Forms.TextBox();
             this.noma_mouse_y = new System.Windows.Forms.TextBox();
             this.noma_com_connect = new System.Windows.Forms.Button();
+            this.noma_com_baud = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -47,13 +48,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Select COM Port";
             // 
-            // noma_com_port_box
+            // noma_com_port
             // 
-            this.noma_com_port_box.FormattingEnabled = true;
-            this.noma_com_port_box.Location = new System.Drawing.Point(16, 29);
-            this.noma_com_port_box.Name = "noma_com_port_box";
-            this.noma_com_port_box.Size = new System.Drawing.Size(121, 21);
-            this.noma_com_port_box.TabIndex = 2;
+            this.noma_com_port.FormattingEnabled = true;
+            this.noma_com_port.Location = new System.Drawing.Point(16, 29);
+            this.noma_com_port.Name = "noma_com_port";
+            this.noma_com_port.Size = new System.Drawing.Size(121, 21);
+            this.noma_com_port.TabIndex = 2;
             // 
             // button1
             // 
@@ -91,16 +92,25 @@
             this.noma_com_connect.UseVisualStyleBackColor = true;
             this.noma_com_connect.Click += new System.EventHandler(this.noma_com_connect_Click);
             // 
+            // noma_com_baud
+            // 
+            this.noma_com_baud.FormattingEnabled = true;
+            this.noma_com_baud.Location = new System.Drawing.Point(143, 29);
+            this.noma_com_baud.Name = "noma_com_baud";
+            this.noma_com_baud.Size = new System.Drawing.Size(121, 21);
+            this.noma_com_baud.TabIndex = 7;
+            // 
             // noma_main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 367);
+            this.Controls.Add(this.noma_com_baud);
             this.Controls.Add(this.noma_com_connect);
             this.Controls.Add(this.noma_mouse_y);
             this.Controls.Add(this.noma_mouse_x);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.noma_com_port_box);
+            this.Controls.Add(this.noma_com_port);
             this.Controls.Add(this.label1);
             this.Name = "noma_main_form";
             this.Text = "Noma - Natural Gesture Computer Control";
@@ -112,12 +122,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox noma_com_port_box;
+        private System.Windows.Forms.ComboBox noma_com_port;
         private System.Windows.Forms.Button button1;
         private System.IO.Ports.SerialPort noma_serial_port;
         private System.Windows.Forms.TextBox noma_mouse_x;
         private System.Windows.Forms.TextBox noma_mouse_y;
         private System.Windows.Forms.Button noma_com_connect;
+        private System.Windows.Forms.ComboBox noma_com_baud;
     }
 }
 
