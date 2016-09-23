@@ -56,12 +56,12 @@ namespace noma
             // Checking that the port isn't already in use
             if (!noma_serial_port.IsOpen) {
 
+                // It's not, let's try to open it
                 try {
 
-                    // It's not, let's try to open it
                     noma_serial_port.Open();
+                    MessageBox.Show("Connected to " + noma_serial_port.PortName + " @ " + noma_serial_port.BaudRate + " baud");
 
-                    MessageBox.Show("Connected!");
 
                 } catch (Exception e) {
                     // Failed to connect to the COM port
