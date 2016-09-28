@@ -52,6 +52,7 @@
     <Compile Include="noma_main.Designer.cs">
       <DependentUpon>noma_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="noma_virtual_screen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="noma_main.resx">

@@ -41,8 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.noma_mouse_location_disp = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -147,15 +148,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mouse Control";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "X Position";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -165,17 +157,35 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Y Position";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "X Position";
+            // 
+            // noma_mouse_location_disp
+            // 
+            this.noma_mouse_location_disp.Location = new System.Drawing.Point(248, 12);
+            this.noma_mouse_location_disp.Name = "noma_mouse_location_disp";
+            this.noma_mouse_location_disp.Padding = new System.Windows.Forms.Padding(20);
+            this.noma_mouse_location_disp.Size = new System.Drawing.Size(522, 334);
+            this.noma_mouse_location_disp.TabIndex = 12;
+            this.noma_mouse_location_disp.TabStop = false;
+            this.noma_mouse_location_disp.Text = "Mouse Location";
+            // 
             // noma_main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(258, 358);
+            this.ClientSize = new System.Drawing.Size(782, 358);
+            this.Controls.Add(this.noma_mouse_location_disp);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(274, 397);
-            this.MinimumSize = new System.Drawing.Size(274, 397);
             this.Name = "noma_main_form";
             this.Text = "Noma - Natural Gesture Computer Control";
             this.groupBox1.ResumeLayout(false);
@@ -201,6 +211,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox noma_mouse_location_disp;
     }
 }
 

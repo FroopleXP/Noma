@@ -44,6 +44,9 @@ namespace noma
                 noma_com_baud.Items.Add(rate);
             }
 
+            // Generating the virtual screen
+            noma_virtual_screen virtual_screen = new noma_virtual_screen(230, 36);
+
         }
 
         // Used to connect to the COM port
